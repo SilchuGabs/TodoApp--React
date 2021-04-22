@@ -1,0 +1,198 @@
+@import '../abstracts/variables';
+@import '../base/typography';
+.tbl__body {
+    // background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    // background: linear-gradient(to right, #25c481, #25b7c4);
+    margin-top: 1rem;
+}
+
+.container {
+    width: 84%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10rem;
+    align-items: center;
+}
+
+.icon {
+    transform: rotate(-20deg);
+    margin-bottom: 1rem;
+}
+
+.tbl__heading {
+    display: flex;
+    &-option {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4rem;
+        &-select {
+            position: relative;
+            border-color: #eee;
+            background-color: transparent;
+            color: #333333;
+            padding: 15px 20px 13px 15px;
+            font-family: $font-header;
+            font-weight: 700;
+            line-height: 20px;
+            font-size: 1.8rem;
+            outline: none;
+            border-radius: 0;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-indent: 13%;
+        }
+        &-select:hover,
+        &-select:active,
+        &-select:focus {
+            border: none;
+            outline: none;
+        }
+    }
+}
+
+.tbl__heading-h1 {
+    position: relative;
+    font-size: 2rem;
+    font-family: $font-header;
+    margin: 3rem 2rem;
+    margin-bottom: 4.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    font-weight: 600;
+    font-size: 2rem;
+    color: $color-text;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.tbl__heading-h1:before {
+    width: 28px;
+    height: 5px;
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    margin-left: -14px;
+    background-color: $color-primary-dark;
+}
+
+.tbl__heading-h1:after {
+    width: 100px;
+    height: 1px;
+    display: block;
+    content: "";
+    position: relative;
+    margin-top: 8px;
+    left: 50%;
+    margin-left: -50px;
+    background-color: $color-primary-dark;
+    ;
+}
+
+.container__btn {
+    margin-left: auto;
+}
+
+table {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    border-bottom: 0.1px solid rgba(0, 0, 0, 0.317);
+    border-collapse: collapse;
+    padding: 1rem;
+    width: 90%;
+}
+
+thead tr {
+    border-bottom: 0.1px solid rgba(0, 0, 0, 0.317);
+}
+
+tr {
+    padding: 12px 13px;
+    &:nth-child(even) {
+        background-color: $color-primary-light;
+    }
+    &:hover {
+        //text-shadow: 1px 0px 0px black;
+        //text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+thead tr:hover {
+    text-shadow: none;
+    text-transform: none;
+}
+
+th {
+    height: 70px;
+    width: 30rem;
+    padding: 0rem 2rem;
+    text-align: left;
+}
+
+.th__shorter {
+    width: 15rem;
+}
+
+td {
+    text-align: left;
+    padding: 2rem;
+}
+
+.custom-class {
+    background-color: #e06fc9;
+}
+
+.input-test {
+    margin-left: 10rem;
+}
+
+.parah::focus {
+    background: yellow;
+}
+
+.text-urgent {
+    color: red;
+    text-transform: uppercase;
+}
+
+.text-notUrgent {
+    color: blue;
+    text-transform: uppercase;
+}
+
+.text-delegate {
+    color: $color-warning;
+    text-transform: uppercase;
+}
+
+.text-postpone {
+    color: green;
+    text-transform: uppercase;
+}
+
+//////////////////////////////
+//////MODAL CSS//////////////
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__content {
+        padding: 2rem;
+        text-align: center;
+        p {
+            margin: 2rem;
+        }
+    }
+    &__btn {
+        padding-left: 27rem;
+        .btn {
+            margin-left: 1rem;
+        }
+    }
+}

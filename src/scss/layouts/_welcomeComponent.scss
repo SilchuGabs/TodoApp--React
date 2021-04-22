@@ -1,0 +1,19 @@
+.welcomeComponent {
+    margin: 0rem;
+    margin-left: 0rem;
+    height: 100%;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.welcome__content {
+    min-height: calc(83.67vh - 40px);
+    width: 100%;
+}
+
+.welcome__footer {
+    height: 5rem;
+}

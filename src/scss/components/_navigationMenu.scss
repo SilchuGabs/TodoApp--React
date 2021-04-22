@@ -1,0 +1,143 @@
+    @import '../abstracts/variables';
+    @import '../base/typography';
+    .navigation {
+        &__checkbox {
+            display: none;
+        }
+        &__button {
+            background-color: $color-white;
+            height: 6rem;
+            width: 6rem;
+            position: fixed;
+            cursor: pointer;
+            top: 2rem;
+            //NOTE: MENU SIDE: Chose which side you want Menu Appear : left or right - Change all say "Menu Side"
+            right: 3rem;
+            border-radius: 50%;
+            z-index: 2000;
+            box-shadow: 0 1rem 3rem rgba($color-text, .2);
+            text-align: center;
+        }
+        &__background {
+            height: 4.3rem;
+            width: 4.3rem;
+            // border-radius: 50%;  -- If we want round background color to grow
+            border-radius: 3%;
+            position: fixed;
+            top: 2.9rem;
+            //NOTE: MENU SIDE: Chose which side you want Menu Appear : left or right 
+            right: 3.8rem;
+            background-image: radial-gradient($color-primary, $color-primary-dark);
+            z-index: 1000;
+            // opacity: 0.6;
+            //This property Origin is not needed if we want to fully cover the screen
+            //NOTE: Menu Side: if you want to position menu on Left comment out transform-origin
+            transform-origin: 13% 6%;
+            transition: transform .3s cubic-bezier(.42, 0, 1, 1);
+        }
+        &__nav {
+            height: 100vh;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1500;
+            opacity: 0;
+            transition: all .4s;
+        }
+        &__list {
+            position: absolute;
+            top: 20%;
+            //NOTE: Menu Side - If you want to right-> right:10% - left->0%
+            right: 10%;
+            // transform: translate(-50%, -50%);
+            transform: translateX(10rem);
+            list-style: none;
+            text-align: center;
+        }
+        &__item {
+            margin-bottom: 3rem;
+        }
+        &__link {
+            &:link,
+            &:visited {
+                display: inline-block;
+                color: $color-text-white;
+                font-size: 2.5rem;
+                font-weight: 300;
+                padding: 1rem 3rem;
+                text-transform: uppercase;
+                text-decoration: none;
+                background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+                background-size: 220%;
+                transition: all .5s;
+            }
+            &:hover,
+            &:active {
+                color: $color-primary;
+                cursor: pointer;
+                font-size: 2.5rem;
+                background-position: 100%;
+                transform: translateX(-1rem);
+            }
+        }
+        //FUNCTIIONALITY
+        &__checkbox:checked~&__background {
+            transform: scale(35);
+            //NOTE:Menu Side: comment-out width if you want to move to the right!
+            // width: 2rem;
+        }
+        &__checkbox:checked~&__nav {
+            opacity: 1;
+            // width: 100%;
+            visibility: visible;
+            //NOTE: Not sure it has any importance but on switching menu to right comment out 100vw
+            width: 100vw;
+        }
+        // TIP: Important! For some reason adding  <span> tag with 
+        //before and after did not work. For some reason the thicknest of line too big.
+        // But adding a <div> instead of <spa> on html doc did the trick!
+        &__icon {
+            position: relative;
+            margin-top: 3rem;
+            &,
+            &::before,
+            &::after {
+                width: 2.5rem;
+                height: 2px;
+                background-color: black;
+                opacity: .9;
+                display: inline-block;
+            }
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                transition: all .2s;
+            }
+            &::before {
+                top: -.8rem;
+            }
+            &::after {
+                top: .8rem;
+            }
+        }
+        &__button:hover &__icon::before {
+            top: -1rem;
+        }
+        &__button:hover &__icon::after {
+            top: 1rem;
+        }
+        &__checkbox:checked+&__button &__icon {
+            background-color: transparent;
+        }
+        &__checkbox:checked+&__button &__icon::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+        &__checkbox:checked+&__button &__icon::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    }

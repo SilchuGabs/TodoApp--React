@@ -1,0 +1,59 @@
+.control__panel {
+    font-size: 1.8rem;
+    color: black;
+    border-radius: 0.5rem;
+}
+
+.control__arrows {
+    display: flex;
+    padding: 1rem;
+    margin-left: 1rem;
+    justify-content: stretch;
+    align-items: center;
+    width: 50%;
+    p {
+        padding: 0 2rem;
+    }
+}
+
+.input__number {
+    -webkit-appearance: none;
+    width: 5rem;
+    height: 5rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+    -moz-appearance: number-input;
+    border: none;
+}
+
+.zoom__cursors {
+    margin-left: 5rem;
+    i {
+        padding: .51rem;
+    }
+    span {
+        text-align: center;
+    }
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.disabled {
+    cursor: not-allowed;
+    color: rgba(255, 0, 0, 0.269);
+}

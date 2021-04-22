@@ -1,0 +1,113 @@
+    @import '../abstracts/variables';
+    @import '../base/typography';
+    .todoContainer {
+        display: flex;
+        flex-direction: column;
+        &__heading {
+            // margin-left: 20rem;
+            text-align: center;
+            font-size: 4rem;
+            font-weight: 300;
+        }
+    }
+    
+    .note1--form {
+        height: 15rem;
+        width: 15rem;
+        top: 7px;
+        left: 20px;
+        right: 10px;
+        bottom: 10px;
+        margin: 2rem;
+        opacity: 0.5;
+        transform: rotate(-30deg);
+        z-index: -1;
+    }
+    
+    .todo {
+        background-color: transparent;
+        margin: 4rem 15rem;
+        &__form {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    .todo__form-group {
+        display: flex;
+        flex-direction: column;
+        margin: 1.5rem;
+        border: none;
+        &-label {
+            padding-top: 2rem;
+        }
+        &-control {
+            // border-bottom: solid 1px black;
+            margin-left: 10rem;
+            width: 50rem;
+            font-size: 1.5rem;
+        }
+        &-select {
+            margin-left: 10rem;
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: groove;
+            border-bottom-color: $color-primary;
+            border-bottom-width: 2px;
+            color: black;
+            background-color: transparent;
+            &:focus,
+            &:Active {
+                font-size: 1rem;
+                border-color: $color-primary;
+                outline: none;
+                font-size: 1.6rem;
+            }
+        }
+        &-option {
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+        }
+    }
+    
+    .text-transform {
+        // text-transform: uppercase;
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
+        border-bottom-color: $color-primary;
+        border-bottom-width: 2px;
+        color: black;
+        background-color: transparent;
+        &:focus,
+        &:active {
+            font-size: 1rem;
+            border-color: $color-primary;
+            outline: none;
+            font-size: inherit;
+        }
+    }
+    
+    .todo__form-btn {
+        width: 10rem;
+        margin-top: 3rem;
+        margin-left: 30rem;
+    }
+    
+    .text-urgent {
+        color: red;
+        text-transform: uppercase;
+    }
+    
+    .text-notUrgent {
+        color: blue;
+        text-transform: uppercase;
+    }
+    
+    .text-delegate {
+        color: $color-warning;
+        text-transform: uppercase;
+    }

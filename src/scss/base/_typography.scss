@@ -1,0 +1,10 @@
+@import'/src/scss/abstracts/variables';
+body {
+    font-size: $text-base-size;
+    font-family: $font-primary;
+    color: $color-text;
+}
+
+header {
+    font-family: $font-header;
+}

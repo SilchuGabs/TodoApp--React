@@ -1,0 +1,97 @@
+        @import '/src/scss/base/typography';
+        .mainHeader {
+            margin-top: 0;
+            font-size: 1.8rem;
+            height: 10rem;
+            width: 100vw;
+            border: 1px solid #eee;
+        }
+        
+        .navbar {
+            color: black;
+            height: 10rem;
+            width: 90%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin-right: 2rem;
+            &__logo {
+                position: relative;
+                bottom: 10.5rem;
+                &-img {
+                    height: 6rem;
+                    width: 6rem;
+                    position: absolute;
+                    left: 2rem;
+                    transform: rotate(-30deg);
+                }
+            }
+            &__user {
+                font-size: 1.8rem;
+                margin-left: 10rem;
+                justify-self: center;
+                align-self: center;
+                &-p {
+                    font-family: $font-roboto;
+                    font-size: 1.8rem;
+                    text-transform: uppercase;
+                    // font-weight: 700;
+                }
+            }
+            &__logout {
+                margin-left: auto;
+                &-link,
+                &-link:active {
+                    font-family: $font-roboto;
+                    letter-spacing: 0;
+                    background: transparent;
+                    // font-weight: 700;
+                    border: none;
+                    color: black;
+                    text-decoration: none;
+                    outline: none;
+                    padding: .5rem;
+                    display: inline-block;
+                    font-size: 1.8rem;
+                    text-transform: uppercase;
+                    // transition: all .5s;
+                    transition-property: all;
+                    transition-duration: .6s;
+                    transition-timing-function: ease;
+                    &:hover {
+                        letter-spacing: 5px;
+                        // border-radius: 5%;
+                        // padding: 1rem;
+                        // color: white;
+                        // background-color: $color-primary;
+                        // transform: translateX(1rem);
+                    }
+                    &:after,
+                    &:before {
+                        backface-visibility: hidden;
+                        -webkit-backface-visibility: hidden;
+                        border: 1px solid rgb($color-primary, 0);
+                        bottom: 0px;
+                        content: " ";
+                        display: block;
+                        margin: 0 auto;
+                        position: relative;
+                        transition: all 280ms ease-in-out;
+                        width: 0;
+                    }
+                    &:hover:after,
+                    &:hover:before {
+                        backface-visibility: hidden;
+                        -webkit-backface-visibility: hidden;
+                        border-color: $color-primary;
+                        transition: width 350ms ease-in-out;
+                        width: 70%;
+                    }
+                    &:hover:before {
+                        bottom: auto;
+                        top: 0;
+                        width: 70%;
+                    }
+                }
+            }
+        }

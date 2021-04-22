@@ -1,0 +1,94 @@
+@import '../abstracts/variables';
+@import '../base/typography';
+//////////////////////////////////////
+//////COMPONENT////////////////
+.alert__component {
+    display: flex;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    width: 27rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert__danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.alert__sucess {
+    background-color: rgba(227, 253, 235, 1);
+    border-color: rgba(38, 179, 3, 1);
+    color: rgba(60, 118, 61, 1);
+}
+
+.alert__info {
+    background-color: rgba(217, 237, 247, 1);
+    color: rgba(49, 112, 143, 1);
+    border-color: rgba(126, 182, 193, 1);
+}
+
+.alert__warning {
+    background-color: rgba(252, 248, 227, 1);
+    border-color: rgba(177, 161, 129, 1);
+    color: rgba(138, 109, 59, 1);
+}
+
+.btn__link {
+    margin-left: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    float: right;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    &-danger {
+        color: #a94442;
+    }
+    &-success {
+        color: rgba(60, 118, 61, 1);
+    }
+    &-info {
+        color: rgba(49, 112, 143, 1);
+    }
+    &-warning {
+        color: rgba(138, 109, 59, 1);
+    }
+    &:hover {
+        color: black;
+        font-size: 3.5rem;
+    }
+}
+
+//////////////////////////////////
+/////////ALERT DIV///////////////
+.alert__solo {
+    position: absolute;
+    padding: 1.5rem;
+    margin-top: 0rem;
+    width: 70%;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    &-success {
+        background-color: rgba(227, 253, 235, 1);
+        border-color: rgba(38, 179, 3, 1);
+        color: rgba(60, 118, 61, 1);
+    }
+    &-warning {
+        background-color: rgba(252, 248, 227, 1);
+        border-color: rgba(177, 161, 129, 1);
+        color: rgba(138, 109, 59, 1);
+    }
+    &-danger {
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+    }
+    &-info {
+        background-color: rgba(217, 237, 247, 1);
+        color: rgba(49, 112, 143, 1);
+        border-color: rgba(126, 182, 193, 1);
+    }
+}
